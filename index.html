@@ -11,19 +11,37 @@
 <body>
     <div class="wrapper">
         <div class="header">
-            Conversor
+            <h1>Conversor</h1>
         </div>
         <div class="menu">
             <a href="#home">home</a>
             <a href="#sobre">sobre</a>
         </div>
         <div class="content">
-            <input id="in" type="text" placeholder="Digite um valor em metros" />
-            <input id="out" type="text" placeholder="Resultado em cm" />
+            <input id="in" type="text" placeholder="Digite um valor" />
+            <select id="inselect">
+                <option value="km">km</option>
+                <option value="hm">hm</option>
+                <option value="dam">dam</option>
+                <option value="m">m</option>
+                <option value="dm">dm</option>
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+            </select>
+            <label id="out">Resultado:</label>
+            <select id="outselect">
+                <option value="km">km</option>
+                <option value="hm">hm</option>
+                <option value="dam">dam</option>
+                <option value="m">m</option>
+                <option value="dm">dm</option>
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+            </select>
             <button onclick="converter()">Converter</button>
         </div>
         <div class="footer">
-            copyright
+            copyright@dev
         </div>
     </div>
 </body>
