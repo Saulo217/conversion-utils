@@ -1,6 +1,10 @@
-function calculoComprimento(value, diferenca) {
-    value? value : value = 0;
-    return Math.pow(10, diferenca) * value;
+function calculoComprimento(inputNum,diferenca){
+
+    const moduloDiferenca = diferenca < 0 ? 
+    () => { return inputNum / Math.pow(10, diferenca * -1); } 
+    : 
+    () => { return inputNum * Math.pow(10, diferenca); }
+    return moduloDiferenca();
 }
 
 function converter() {
@@ -8,6 +12,6 @@ function converter() {
     const $output = document.getElementById('out');
     const $insel = document.getElementById('inselect');
     const $outsel = document.getElementById('outselect');
-    $output.innerText = "Resultado: " + calculoComprimento($input.value, $insel.selectedIndex - $outsel.selectedIndex);
+    $output.innerText = "Resultado: " + calc($input.value, $insel.selectedIndex - $outsel.selectedIndex);
     return;
 }

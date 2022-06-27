@@ -3,7 +3,6 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
 .wrapper {
     position: absolute;
     width: 100%;
@@ -52,9 +51,10 @@
 
 .content > input {
     position: relative;
-    width: 30%;
+    width: 40%;
     height: 5%;
     margin: 5px 5px 5px 5px;
+    text-align: center;
 }
 
 .content > label {
