@@ -1,21 +1,28 @@
-import { conversaoComprimento } from './pages/comprimento.js';
-import { calculoComprimento } from './calculos/comprimento.js';
+function calculoComprimento(inputNum, diferenca){
+
+    inputNum = inputNum? inputNum  : 1;
+    diferenca  = diferenca? diferenca : 0;
+    
+    return Number(`${inputNum}E${diferenca}`);
+}
+
+function selectElements(...selectors) {
+
+    let elements = {};
+    for(let index of selectors) {
+        elements[index.slice(1)] = document.querySelector(index);
+    }
+
+    return elements;
+}
 
 function converter() {
     
-    const $insel = document.querySelector('#inselect');
-    const $outsel = document.querySelector('#outselect');
-    document.querySelector('#out').innerText = "Resultado: " + calculoComprimento(
+    const { inselect, outselect, out } = selectElements('#inselect', '#outselect', '#out');
+    out.innerText = "Resultado: " + calculoComprimento(
         document.querySelector('#in').value, 
-        $insel.selectedIndex - $outsel.selectedIndex
+        inselect.selectedIndex - outselect.selectedIndex
     );
 
     return;
 }
-
-
-window.addEventListener('load', () => {
-
-    conversaoComprimento('.content');
-    return;
-});
