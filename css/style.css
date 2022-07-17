@@ -29,15 +29,6 @@
     background: #33d5f3;
 }
 
-.menu > a {
-    padding: 0px 5px 0px 5px;
-}
-
-.menu > a:hover {
-    border-radius: 5%;
-    background: #9e9d9d;
-}
-
 .content {
     display: flex;
     justify-content: center;
