@@ -1,9 +1,6 @@
-function calculoComprimento(inputNum, diferenca){
-
-    inputNum = inputNum? inputNum  : 1;
-    diferenca  = diferenca? diferenca : 0;
+function calculusLength(userInput, difference){
     
-    return Number(`${inputNum}E${diferenca}`);
+    return Number(`${userInput? userInput : 1}E${difference? difference : 0}`);
 }
 
 function selectElements(...selectors) {
@@ -16,13 +13,12 @@ function selectElements(...selectors) {
     return elements;
 }
 
-function converter() {
+function convert() {
     
-    const { inselect, outselect, out } = selectElements('#inselect', '#outselect', '#out');
-    out.innerText = "Resultado: " + calculoComprimento(
-        document.querySelector('#in').value, 
-        inselect.selectedIndex - outselect.selectedIndex
-    );
+    const { inselect, outselect, output, input } = selectElements('#inselect', '#outselect', '#output', '#input');
+    output.innerText = `Resultado: ${calculusLength(
+        input.value, inselect.selectedIndex - outselect.selectedIndex
+    )} `;
 
     return;
 }

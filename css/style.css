@@ -49,18 +49,19 @@
     height: 75%;
 }
 
-.content > input {
-    position: relative;
-    width: 40%;
-    height: 5%;
-    margin: 5px 5px 5px 5px;
+.content div input {
     text-align: center;
 }
 
-.content > label {
-    margin: 5px 5px 5px 5px;
+.content div {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
 }
 
+.content div select {
+    margin-left: 5px;
+}
 .footer {
     display: flex;
     justify-content: center;
