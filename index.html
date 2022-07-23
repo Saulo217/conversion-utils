@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/main.js" defer="true"></script>
     <title>Conversion - Utils</title>
 </head>
 <body>
@@ -14,55 +13,12 @@
             <h1>Conversor</h1>
         </div>
         <div class="menu">
-            <button class="pageLength">lenght</button>
-            <button class="pageCapacity">capacity</button>
-            <button class="pageMass">mass</button>
-            <button class="pageVolume">volume</button>
+            <a href="index.html">Home</a>
+            <a href="template/sobre.html" target="content">Sobre</a>
+            <a href="template/conversor.html" target="content">Conversor</a>
         </div>
         <div class="content">
-            <div class="type">
-                <select class="inputType">
-                    <option value="length">length</option>
-                    <option value="capacity">capacity</option>
-                    <option value="mass">mass</option>
-                    <option value="volume">volume</option>
-                </select>
-                <!--
-                    <select class="outputType">
-                        <option value="length">length</option>
-                        <option value="capacity">capacity</option>
-                        <option value="mass">mass</option>
-                        <option value="volume">volume</option>
-                    </select>
-                -->
-            </div>
-            <div class="conversor">
-                <div class="input"> 
-                    <input id="input" type="text" placeholder="Digite um valor" />
-                    <select id="inselect">
-                        <option value="mm">mm</option>
-                        <option value="cm">cm</option>
-                        <option value="dm">dm</option>
-                        <option value="m">m</option>
-                        <option value="dam">dam</option>
-                        <option value="hm">hm</option>
-                        <option value="km">km</option>
-                    </select>
-                </div>
-                <div class="output"> 
-                    <label id="output">Resultado:</label>
-                    <select id="outselect">
-                        <option value="mm">mm</option>
-                        <option value="cm">cm</option>
-                        <option value="dm">dm</option>
-                        <option value="m">m</option>
-                        <option value="dam">dam</option>
-                        <option value="hm">hm</option>
-                        <option value="km">km</option>
-                    </select>
-                </div>
-                <button onclick="convert()">Converter</button>
-            </div>
+            <iframe src="template/conversor.html" name="content"></iframe>
         </div>
         <div class="footer">
             copyright@dev

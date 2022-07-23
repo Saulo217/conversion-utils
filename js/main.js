@@ -18,7 +18,7 @@ function convert() {
     const { inselect, outselect, output, input } = selectElements('#inselect', '#outselect', '#output', '#input');
     output.innerText = `Resultado: ${calculus(
         input.value, inselect.selectedIndex - outselect.selectedIndex
-    )} `;
+    )}`;
 
     return;
 }
